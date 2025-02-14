@@ -5,7 +5,7 @@ const Booking = require('../models/booking')
 
 const bookingSchema = Joi.object({
     customerName: Joi.string().required(),
-    bookingDate: Joi.date().iso().required(),
+    bookingDate: Joi.date().required(),
     bookingAmount: Joi.number().positive().required(),
     vendorDetails:Joi.object({
         name: Joi.string(),
@@ -28,7 +28,7 @@ router.post('/', async(req, res) => {
 router.get('/', async(req, res) => {
     try{
         const bookings = await Booking.find();
-        if(!booking) {
+        if(!bookings) {
             return res.json({message:"No Bookings found"});
         }
         res.json(bookings);
