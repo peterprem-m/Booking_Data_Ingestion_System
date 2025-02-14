@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "cd216593-afc2-4903-9113-529a2946cd69",
+		"name": "Booking Data API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23568348"
+	},
+	"item": [
+		{
+			"name": "CreateBooking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\": \"Prem\",\r\n    \"bookingAmount\": 50000,\r\n    \"bookingDate\": \"2022-09-27\",\r\n    \"vendorDetails\": {\r\n        \"name\" : \"Klaus\",\r\n        \"contact\": \"8745680860\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBookingbyId",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/bookings/67af5fd9af5316eb3a8f3293",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"bookings",
+						"67af5fd9af5316eb3a8f3293"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBookings",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteBookingbyId",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/bookings/67af5f51af5316eb3a8f328f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"bookings",
+						"67af5f51af5316eb3a8f328f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateBookingById",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\": \"Prem\",\r\n    \"bookingAmount\": 50000,\r\n    \"bookingDate\": \"2022-09-27\",\r\n    \"vendorDetails\": {\r\n        \"name\" : \"Ducket\",\r\n        \"contact\": \"8745680860\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/bookings/67af5fd9af5316eb3a8f3293",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"bookings",
+						"67af5fd9af5316eb3a8f3293"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
